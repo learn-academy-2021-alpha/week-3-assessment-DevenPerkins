@@ -63,7 +63,7 @@ var makeItFibonacci = (num) => {
     //a new variable is made to store the recursion to make it easy to call in the following lines num will be 6 or 10 then it subtracts one each time that it is recursively run
     var fibArr = makeItFibonacci(num - 1),
         //a new variable is created to help dig into the array
-        fibLength = fibArr.length 
+        fibLength = fibArr.length                    
         //fibArr will then push the fibArr with the value before added to the current value.
         fibArr.push(fibArr[fibLength - 1] + fibArr[fibLength - 2])
     //return the variable fibArr which was run the total times that the argument specifies
@@ -235,12 +235,14 @@ var numbersToAdd3 = []
 // b) Create the function that makes the test pass.
 //crate a function called addNumbersArr
 //takes in an array as an argument
-//the function will iterate through each item and adds the two numbers before it
+//the function will iterate through each item and adds the two numbers before 
+// I have tried many different combinations for this challenge.
+// UPDATE so in my tinkering I had been putting empty braces on line 242 when it should have been a 0 just like how Sarah showed it in the run through
 const addNumbersArr = (arr) =>{
-    sumStore = []
+    let sumStore = 0
     sumArr = arr.map(value => {
-        return 
+        return sumStore += value
     })
-    return sumArr
+   return sumArr
 }
 console.log(addNumbersArr(numbersToAdd1))

@@ -1,10 +1,8 @@
-class App extends React.Component{
+class App =
     constructor(props){
-      super(props)
-      this.state = {
-        hand: [] 
+     
       }
-    }
+    
 
     drawCard = () => {
       const { hand } = this.state
