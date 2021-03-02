@@ -190,7 +190,7 @@ const findMiddleOfWord = (str) => {
 // --------------------4) Create a function that takes in an array and returns an array of the accumulating sum. An empty array should return an empty array.
 
 // a) Create a test with expect statements for each of the variables provided.
-fdescribe("when addNumbersArr is called", () => {
+describe("when addNumbersArr is called", () => {
     it("returns [2, 6, 51, 60] when called with [2, 4, 45, 9]", () => {
         //Arrange 
         const numbersToAdd1 = [2, 4, 45, 9];
@@ -237,7 +237,8 @@ var numbersToAdd3 = []
 //takes in an array as an argument
 //the function will iterate through each item and adds the two numbers before 
 // I have tried many different combinations for this challenge.
-// UPDATE so in my tinkering I had been putting empty braces on line 242 when it should have been a 0 just like how Sarah showed it in the run through
+// UPDATE so in my tinkering I had been putting empty braces on line 242 when it should have been a 0 just like how Sarah showed it in the run through low key upset that I was that close but happy I was on the right track
+
 const addNumbersArr = (arr) =>{
     let sumStore = 0
     sumArr = arr.map(value => {
