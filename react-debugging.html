@@ -24,7 +24,7 @@
         constructor(props){
           super(props)
           this.state = {
-            hand: []
+            hand: [] 
           }
         }
 
@@ -47,18 +47,20 @@
         }
 
         render(){
+          console.log("hand" , this.state.hand)
           return(
             <>
               <h1>Draw a Card</h1>
               <Card
                 drawCard={ this.drawCard }
                 shuffle={ this.shuffle }
+                hand = { this.state.hand }  /*<------added this */
               />
             </>
           )
         }
       }
-
+    
       class Card extends React.Component{
         render(){
           let handStyles = {
@@ -73,12 +75,13 @@
             margin: "10px",
             padding: "10px"
           }
+          console.log("hand" , this.props.hand)
           return(
             <>
-              <button onClick={}>
+              <button onClick={ this.props.drawCard }> {/*<------changed this to "this.props.drawCard"*/}
                 Click to Draw a Card
               </button>
-              <button onClick={ shuffle }>
+              <button onClick={ this.props.shuffle }>{/*<------ also changed this to have this.props*/}
                 Return Cards and Shuffle Deck
               </button>
               <div style={ handStyles }>
@@ -91,7 +94,7 @@
                 })}
               </div>
             </>
-          )
+          ) 
         }
       }
 
